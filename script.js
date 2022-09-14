@@ -1,8 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let baseSize = localStorage.getItem('fontSize') || 100;
-    if(baseSize > 200) {
-        baseSize = 100;
-    }
+    let baseSize = +localStorage.getItem('fontSize') || 100;
     let sizeDispay = document.getElementById('size');
     sizeDispay.innerHTML = baseSize;
     const doc = document.querySelector('.doc');
